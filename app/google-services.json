@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1041427871154",
+    "project_id": "qr-scanner-and-genrator-50d6d",
+    "storage_bucket": "qr-scanner-and-genrator-50d6d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041427871154:android:31e226324c56b8067820ab",
+        "android_client_info": {
+          "package_name": "com.sih.qr_scannerandgenrator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMwF8TrblFkppMFLmzWlRCwwhbDxOMJZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

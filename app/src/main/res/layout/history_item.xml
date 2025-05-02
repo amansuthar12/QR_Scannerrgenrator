@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- TextView for the history text -->
+<TextView
+android:id="@+id/historyText"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:textSize="18sp"
+android:textColor="#333333"
+android:paddingBottom="8dp"
+android:text="QR Code History"/>
+
+    <!-- ImageView for the QR code -->
+<ImageView
+android:id="@+id/historyQrImage"
+android:layout_width="100dp"
+android:layout_height="100dp"
+android:layout_gravity="center"
+android:layout_marginTop="8dp"
+android:contentDescription="QR Code"
+android:scaleType="centerCrop" /> <!-- Adjust scale type based on how you want the image to fit -->
+
+    </LinearLayout>

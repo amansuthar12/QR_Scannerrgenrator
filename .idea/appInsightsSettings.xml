@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.sih.qr_scannerandgenrator" />
+                  <option name="mobileSdkAppId" value="1:1041427871154:android:31e226324c56b8067820ab" />
+                  <option name="projectId" value="qr-scanner-and-genrator-50d6d" />
+                  <option name="projectNumber" value="1041427871154" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

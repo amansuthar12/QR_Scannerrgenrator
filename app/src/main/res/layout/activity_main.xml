@@ -1,84 +1,90 @@
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:id="@+id/main"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    tools:context=".MainActivity">-->
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:layout_marginTop="50dp"-->
-<!--        android:text="@string/tagline"-->
-<!--        android:textColor="#2069B7"-->
-<!--        android:textSize="26dp"-->
-<!--        app:layout_constraintEnd_toEndOf="@+id/main"-->
-<!--        app:layout_constraintStart_toStartOf="@id/main"-->
-<!--        app:layout_constraintTop_toTopOf="@id/main" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/button"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:backgroundTint="#2A2DB3"-->
-<!--        android:text="Scan"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:layout_marginTop="350dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="@id/main"-->
-<!--        tools:layout_editor_absoluteY="314dp" />-->
-
-<!--    <Button-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="88dp"-->
-<!--        android:backgroundTint="@color/green"-->
-<!--        android:text="@string/generate"-->
-<!--        android:textColor="@color/black"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.498"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/button" />-->
-
-<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="#F0F4F8"
+    android:fillViewport="true">
 
-    <!-- Input for QR Code Generator -->
-    <EditText
-        android:id="@+id/inputText"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter text or URL"
-        android:inputType="text" />
+        android:orientation="vertical"
+        android:paddingTop="24dp"
+        android:paddingRight="24dp"
+        android:paddingLeft="24dp"
+        android:gravity="center"
+        android:importantForAccessibility="yes">
 
-    <!-- Generate QR Code Button -->
-    <Button
-        android:id="@+id/generateButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Generate QR Code" />
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QR Code Scanner &amp; Generator"
+            android:textSize="28sp"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp"
+            android:importantForAccessibility="yes" />
 
-    <!-- Display QR Code -->
-    <ImageView
-        android:id="@+id/qrCodeImage"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp" />
+        <EditText
+            android:id="@+id/inputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter text or URL"
+            android:inputType="text"
+            android:padding="16dp"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/rounded_edittext"
+            android:importantForAccessibility="yes" />
 
-    <!-- Open QR Scanner Button -->
-    <Button
-        android:id="@+id/scanButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Scan QR Code" />
-</LinearLayout>
+        <Button
+            android:id="@+id/generateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generate QR Code"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:background="@drawable/rounded_button"
+            android:padding="14dp"
+            android:layout_marginBottom="24dp"
+            android:importantForAccessibility="yes" />
+
+        <ImageView
+            android:id="@+id/qrCodeImage"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_marginBottom="32dp"
+            android:layout_gravity="center"
+            android:contentDescription="Generated QR Code" />
+
+        <Button
+            android:id="@+id/scanButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan QR Code"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:background="@drawable/rounded_button"
+            android:padding="14dp"
+            android:importantForAccessibility="yes" />
+        <Button
+            android:id="@+id/viewHistoryButton"
+            android:layout_width="match_parent"
+            android:background="@drawable/rounded_button"
+            android:layout_height="wrap_content"
+            android:text="View History"
+            android:layout_marginTop="16dp" />
+
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-4681171705756049/2055007609"
+            android:layout_marginTop="24dp" />
+
+    </LinearLayout>
+</ScrollView>
