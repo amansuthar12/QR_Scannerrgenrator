@@ -75,7 +75,11 @@ public class MainActivity extends AppCompatActivity {
         Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in);
         qrCodeImage.startAnimation(fadeIn);
         Button scanButton = findViewById(R.id.scanButton);
-
+        Button viewHistoryButton = findViewById(R.id.viewHistoryButton);
+        viewHistoryButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
+            startActivity(intent);
+        });
         // Generate QR Code
         // Inside the generateButton click listener
         generateButton.setOnClickListener(v -> {
